@@ -804,9 +804,9 @@
 
       function bindScrollHandler() {
         $this.bind(eventClass('scroll'), function (e) {
-          updateGeometry();
-          eventRef.initEvent('scrollbarscroll', true, true);
-          document.dispatchEvent(eventRef);
+            updateGeometry();
+            eventRef.initEvent('scrollbarscroll', true, true);
+            e.target.dispatchEvent(eventRef);
         });
       }
 
